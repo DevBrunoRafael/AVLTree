@@ -118,22 +118,22 @@ public class AVLTree {
     public static void main(String... args) throws InterruptedException {
 
         // pubs realizadas em tempos diferentes
-        Publication pub1 = new Publication(10, "Bruno", "pub1", "media");
+        Publication pub1 = new Publication("Bruno", "pub1", "media");
         Thread.sleep(2000);
         System.out.println("publicação 1 realizada");
-        Publication pub2 = new Publication(20, "Bruno", "pub2", "media");
+        Publication pub2 = new Publication("Bruno", "pub2", "media");
         Thread.sleep(2000);
         System.out.println("publicação 2 realizada");
-        Publication pub3 = new Publication(30, "Bruno", "pub3", "media");
+        Publication pub3 = new Publication("Bruno", "pub3", "media");
         Thread.sleep(2000);
         System.out.println("publicação 3 realizada");
-        Publication pub4 = new Publication(40, "Bruno", "pub4", "media");
+        Publication pub4 = new Publication("Bruno", "pub4", "media");
         Thread.sleep(2000);
         System.out.println("publicação 4 realizada");
-        Publication pub5 = new Publication(50, "Bruno", "pub5", "media");
+        Publication pub5 = new Publication("Bruno", "pub5", "media");
         Thread.sleep(2000);
         System.out.println("publicação 5 realizada");
-        Publication pub6 = new Publication(23, "Bruno", "pub6", "media");
+        Publication pub6 = new Publication("Bruno", "pub6", "media");
         Thread.sleep(2000);
         System.out.println("publicação 6 realizada");
 
@@ -148,13 +148,15 @@ public class AVLTree {
         tree.root = tree.insert(tree.root, pub6);
 
         // exemplo base
-////        /* A árvore AVL construida seria:
-////             30
-////            /  \
-////          20   40
-////         /  \     \
-////        10  25    50
-////        */
+        /* A árvore AVL construida seria:
+
+            pub4
+            /  \
+         pub2   pub5
+         /  \     \
+      pub1  pub3  pub6
+
+        */
         System.out.println("Percurso em pré-ordem da árvore é:");
         tree.preOrder(tree.root);
     }

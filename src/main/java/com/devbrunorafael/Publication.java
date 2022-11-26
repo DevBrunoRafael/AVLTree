@@ -1,21 +1,15 @@
 package com.devbrunorafael;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
 import java.time.LocalDateTime;
 
 public class Publication {
 
-    private Integer id;
+    private LocalDateTime createdAt;
     private String author;
     private String description;
     private Object media;
-    private LocalDateTime createdAt;
 
-    public Publication(Integer id, String author, String description, Object media) {
-        this.id = id;
+    public Publication(String author, String description, Object media) {
         this.author = author;
         this.description = description;
         this.media = media;
@@ -24,22 +18,6 @@ public class Publication {
 
     public Publication() {
         super();
-    }
-
-    public Publication(Integer id, String author, String description, Object media, LocalDateTime createdAt) {
-        this.id = id;
-        this.author = author;
-        this.description = description;
-        this.media = media;
-        this.createdAt = createdAt;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getAuthor() {

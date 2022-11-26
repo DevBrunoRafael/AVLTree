@@ -123,6 +123,7 @@ class AVLTreeOFC {
         tree.root = tree.insert(tree.root, 30);
         tree.root = tree.insert(tree.root, 40);
         tree.root = tree.insert(tree.root, 50);
+//        tree.root = tree.insert(tree.root, 25);
         tree.root = tree.insert(tree.root, 60);
 
         /* A árvore AVL construida seria:
